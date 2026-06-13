@@ -15,7 +15,7 @@ None of the files are fully AI-generated verbatim. All files were generated with
 
 ## Summary
 
-AI was used as a coding assistant to speed up implementation. All code has been reviewed by the author.
+AI was used as a coding assistant to speed up implementation. All code has been reviewed by the author. (even the one from AI-Generated comented code)
 The LLM helped me more about stuff that I forgot, such as en passant and castling, and also helped me with the rendering of the pieces. He implemented these on the code I had originally.
 It helped me more on the UX side, such as the valid move highlighting and the turn indicator.
-The ideea of the classes and the functions were originally corected and made by me, obviously with LLMs help.
+The ideea of the classes and the functions were originally quite accurate and made by me, obviously with LLMs help.

@@ -178,6 +178,7 @@ public class Board
         var movingPiece = _squares[fromRow, fromCol];
         var capturedPiece = _squares[toRow, toCol];
         //pentru a simula corect mutarea, trebuie sa luam in considerare si captura en passant, care nu apare ca o captura normala pe tabla
+        // AI-Generated
         ChessPiece? enPassantCaptured = null;
         if (movingPiece?.Type == PieceType.Pawn && fromCol != toCol && capturedPiece == null){
             enPassantCaptured = _squares[fromRow, toCol];
@@ -197,7 +198,7 @@ public class Board
         }
         return inCheck;
     }
-
+        //End AI-Generated
     //verifica daca jucatorul de culoarea data are vreo mutare legala disponibila, adica daca poate muta vreo piesa fara sa lase regele in sah
     private bool HasAnyLegalMove(PieceColor color)
     {
@@ -250,6 +251,7 @@ public class Board
         }
 
         //captura se face diagonal, deci trebuie sa verificam daca acolo e o piesa adversa sau daca e captura en passant
+        // AI-Generated
         if (Math.Abs(toCol - fromCol) == 1 && toRow == fromRow + direction){
             // Captura normala
             if (_squares[toRow, toCol] != null){
@@ -266,6 +268,7 @@ public class Board
         }
         return false;
     }
+    // AI-Generated end
 
     private bool IsValidRookMove(int fromRow, int fromCol, int toRow, int toCol)
     {
@@ -303,6 +306,7 @@ public class Board
         }
 
         //rocada
+        //AI-Generated
         if (rowDiff == 0 && colDiff == 2 && !king.HasMoved && !IsInCheck(king.Color)){
             int rookCol = toCol > fromCol ? 7 : 0;
             var rook = _squares[fromRow, rookCol];
@@ -315,7 +319,7 @@ public class Board
             for (int c = fromCol + step; c != rookCol; c += step){
                 if (_squares[fromRow, c] != null) return false;
             }
-
+        //End AI-Generated
             //recele mnu poate merge intr un patrat atacat
             var opponent = king.Color == PieceColor.White ? PieceColor.Black : PieceColor.White;
             for (int c = fromCol; c != toCol + step; c += step){

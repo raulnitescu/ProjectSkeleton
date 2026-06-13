@@ -11,6 +11,7 @@ public static class Program
     private const int WindowSize = 800;
     public static void Main()
     {
+        //AI Generated
         var sdl = new Sdl(new SdlContext());
         var sdlInitResult = sdl.Init(Sdl.InitVideo | Sdl.InitEvents | Sdl.InitTimer);
         if (sdlInitResult < 0)
@@ -41,6 +42,7 @@ public static class Program
         if (renderer == IntPtr.Zero){
             throw new InvalidOperationException("Failed to create renderer.");
         }
+        //End AI Generated
         //initializare joc
         var board = new Board();
         board.SetupStartingPosition();
@@ -209,6 +211,7 @@ public static class Program
         return $"CHECKMATE! {winner} wins!";
     }
     //desenam tabla, piesele, highlight pentru mutarile posibile si status message
+    //AI Generated
     private static void RenderFrame(Sdl sdl, IntPtr renderer, Board board,
         int selectedRow, int selectedCol, List<(int row, int col)> validMoves)
     {
@@ -267,3 +270,4 @@ public static class Program
         }
     }
 }
+//End AI-Generated

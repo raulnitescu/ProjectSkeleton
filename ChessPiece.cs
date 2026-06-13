@@ -25,6 +25,7 @@ public class ChessPiece : IRenderable
         _ => "?"
     };
     //deseneaza piesa pe tabla de sahcum am zis sus
+    // AI-Generated
     public void Render(IntPtr renderer, Sdl sdl, int pixelX, int pixelY, int squareSize)
     {
         unsafe
@@ -118,3 +119,4 @@ public class ChessPiece : IRenderable
         }
     }
 }
+//End AI-Generated
