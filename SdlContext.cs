@@ -8,7 +8,6 @@ namespace TheAdventure;
 public class SdlContext : INativeContext
 {
     private readonly IntPtr _nativeLibrary;
-    // AI Generated
     public SdlContext()
     {
         string runtimesPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "runtimes");
@@ -93,4 +92,3 @@ public class SdlContext : INativeContext
         ReleaseUnmanagedResources();
     }
 }
-//Ai-Generated end
