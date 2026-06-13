@@ -8,6 +8,7 @@ namespace TheAdventure;
 public class SdlContext : INativeContext
 {
     private readonly IntPtr _nativeLibrary;
+
     public SdlContext()
     {
         string runtimesPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "runtimes");
